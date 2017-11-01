@@ -1,8 +1,40 @@
+body{
+    background: url(wood-cube-abc-cube-letters-48898.jpeg) no-repeat;
+    background-size: 100%;
+}
 .cardBlock{
-    margin-top: 10%;
-    padding: 5px;
+    margin-top: 8%;
+
 }
 
 .inputBlock{
-    padding: 5px;
+    float: left;
+    width: 98%;
+    background-color: #ececec;
+    padding: 1%;
+}
+
+.mainBlock{
+    width: 70%;
+    margin: 0 auto;
+    padding: 1%;
+    padding-bottom: 0.5%;
+    background-color: white;
+    border: solid #cecece 1px;
+    margin-top: 2%;
+   
+}
+.outputBlock{
+    width: 100%;
+    height: auto;
+    float: left;
+    border: solid #cecece 1px;
+    }
+.subheads{
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-bottom: 10px;
+    font-size: 25px;
+
 }

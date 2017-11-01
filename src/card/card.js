@@ -2,26 +2,40 @@ import React, { Component } from 'react';
 import './card.css';
 
 class Card extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            eng: '',
-            mal: ''
-        }
-    }
-    render(props){
+    render(){
+        const mal = this.props.mal;
+        const eng = this.props.eng;
         return(
             <div className ="cardContainer">
                 <div className="card">
-                    <div className="forntCard">
-                        <div className="englishCard">{props ? props.eng : ''}
+                    <div className="subheads">
+                        <span className="inputText">{this.props ? this.props.eng : ''}</span>
+                    </div>
+                    { this.props.mal.length > 0 ? (
+                        <div className="outputBlock">
+                            <ul className="malayalamCard">
+                                { this.props.mal.map(
+                                        (t,i) =><li>{t}</li>
+                                    )
+                                    }
+                            </ul>
+                        </div>
+                    ) : ''
+                        
+                    }
+                    
+                    {/*<div className="forntCard">
+                        <div className="englishCard">{this.props ? this.props.eng : ''}
                         </div>
                     </div>
                     <div className="backCard">
-                        {props ? props.mal.map((data) => (
-                            <div className="malayalamCard">{data}</div>
-                        )) : ''}
-                    </div>
+                        <ul className="malayalamCard">
+                            { this.props.mal.map(
+                                    (t,i) =><li>{t}</li>
+                                )
+                                }
+                        </ul>
+                    </div>*/}
                 </div>
              </div>
         )
